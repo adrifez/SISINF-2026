@@ -1,8 +1,8 @@
 # Tarea 1 — Terminal, directorios y búsqueda
 
-Hazla en el terminal de la máquina Ubuntu de la unidad, con la cuenta `admin`. Lee antes, en el dossier, «Uso de Linux: interfaz gráfica y terminal», «Sistemas de archivos y estructura de directorios» y «Trabajar con archivos y directorios».
+Hazla en el terminal de la máquina Ubuntu de la unidad, con la cuenta `admin`. Lee antes, en los apuntes, «Uso de Linux: interfaz gráfica y terminal», «Sistemas de archivos y estructura de directorios» y «Trabajar con archivos y directorios».
 
-Este enunciado dice qué resultado hace falta. El cómo está en el dossier, en la documentación de las órdenes y, si la usas, en una conversación con un modelo de lenguaje. El comprobador mira el resultado y no enseña la orden que falta. La fecha de entrega y la calificación están en Moodle.
+Este enunciado dice qué resultado hace falta. El cómo está en los apuntes, en la documentación de las órdenes y, si la usas, en una conversación con un modelo de lenguaje. El comprobador mira el resultado y no enseña la orden que falta. La fecha de entrega y la calificación están en Moodle.
 
 Particionar el disco es la tarea 2. Aquí no uses `parted`, `mkfs` ni `lvcreate`.
 
@@ -20,7 +20,7 @@ Copia `u03/datos` a `u03/trabajo` y crea ahí `salidas` y `respuestas`. Trabaja 
 
 # 1. Terminal y rutas
 
-Apartado del dossier: «Uso de Linux: interfaz gráfica y terminal».
+Apartado de los apuntes: «Uso de Linux: interfaz gráfica y terminal».
 
 El indicador acaba en `$` con la cuenta `admin`. `#` sería la cuenta root.
 
@@ -40,7 +40,7 @@ Crea un fichero de usar y tirar dentro de `trabajo` y bórralo. `rm` no tiene pa
 
 # 2. Sistemas de archivos y directorios
 
-Apartado del dossier: «Sistemas de archivos y estructura de directorios».
+Apartado de los apuntes: «Sistemas de archivos y estructura de directorios».
 
 En `taller` hay `Informe.txt`. El otro nombre, que solo cambia en las mayúsculas, está dentro de `muestra/par-mayusculas.tar`. En el ext4 de la Ubuntu tienen que quedar los dos ficheros, cada uno con su texto. Si el segundo sustituye al primero, no estás en el ext4 de la máquina de la unidad.
 
@@ -62,7 +62,7 @@ En `respuestas/sistemas.md`:
 
 # 3. Localizar con find y grep
 
-Apartado del dossier: «Trabajar con archivos y directorios».
+Apartado de los apuntes: «Trabajar con archivos y directorios».
 
 En Archivos, abre `taller` y busca `informe`. Es la búsqueda por nombre de la carpeta que tienes abierta. En el terminal, el mismo problema se resuelve con otras órdenes: una elige ficheros y otra elige líneas. Guarda solo la salida, en estos ficheros:
 
@@ -79,13 +79,10 @@ Desde la raíz del repositorio:
 bash u03/comprobar.sh tarea-01 | tee u03/trabajo/salidas/comprobar-tarea-01.txt
 ```
 
-Comprime la carpeta `u03/trabajo` en un `.zip` y súbelo a esta tarea. Un solo archivo.
+Sube a Moodle estos tres ficheros:
 
-Dentro tienen que estar:
+- `u03/trabajo/salidas/comprobar-tarea-01.txt`
+- `u03/trabajo/respuestas/rutas.md`
+- `u03/trabajo/respuestas/sistemas.md`
 
-- `salidas/comprobar-tarea-01.txt` y el resto de listados de `salidas/`
-- `respuestas/rutas.md` y `respuestas/sistemas.md`
-- `taller/Informe.txt` y `taller/informe.txt`
-- los cinco ficheros de `suelto/` ya colocados en `arbol/`
-
-El comprobador mira las órdenes. Los dos textos se contrastan con el dossier.
+El comprobador mira las órdenes. Los dos textos se contrastan con los apuntes.

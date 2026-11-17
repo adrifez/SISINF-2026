@@ -4,7 +4,7 @@ Prácticas del módulo 0483, Sistemas informáticos. Se clonan y se hacen en el 
 
 ## U.T.3 — Gestión de la información en Linux
 
-Hazlas en la máquina Ubuntu de la unidad, con la cuenta `admin`. El terminal es el de esa máquina. El dossier de la unidad se lee antes: este repositorio no lo trae.
+Hazlas en la máquina Ubuntu de la unidad, con la cuenta `admin`. El terminal es el de esa máquina. Los apuntes de la unidad se leen antes: este repositorio no los trae.
 
 Cada tarea es un enunciado para Moodle. La copia de trabajo se crea en la tarea 1 y las siguientes la reutilizan. `u03/trabajo/` no forma parte del repositorio.
 

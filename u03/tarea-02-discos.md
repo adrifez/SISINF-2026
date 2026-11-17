@@ -1,8 +1,8 @@
 # Tarea 2 — Discos, particiones y volúmenes
 
-Hazla en la máquina Ubuntu de la unidad, con la cuenta `admin`. Lee antes, en el dossier, «Discos, particiones y volúmenes lógicos».
+Hazla en la máquina Ubuntu de la unidad, con la cuenta `admin`. Lee antes, en los apuntes, «Discos, particiones y volúmenes lógicos».
 
-Este enunciado dice qué hay que responder. El cómo razonarlo está en el dossier y, si la usas, en una conversación con un modelo de lenguaje. La fecha de entrega y la calificación están en Moodle.
+Este enunciado dice qué hay que responder. El cómo razonarlo está en los apuntes y, si la usas, en una conversación con un modelo de lenguaje. La fecha de entrega y la calificación están en Moodle.
 
 Usa la copia `u03/trabajo` de la tarea 1. Si no existe, créala como allí se indica.
 
@@ -26,6 +26,9 @@ Desde la raíz del repositorio:
 bash u03/comprobar.sh tarea-02 | tee u03/trabajo/salidas/comprobar-tarea-02.txt
 ```
 
-Comprime la carpeta `u03/trabajo` en un `.zip` y súbelo a esta tarea. Un solo archivo. El zip puede arrastrar lo de la tarea 1.
+Sube a Moodle estos dos ficheros:
 
-Dentro tiene que estar `respuestas/discos.md`, con las cinco respuestas, y `salidas/comprobar-tarea-02.txt`. El comprobador solo mira que el fichero esté escrito. El texto se contrasta con el dossier y con la práctica del segundo disco.
+- `u03/trabajo/salidas/comprobar-tarea-02.txt`
+- `u03/trabajo/respuestas/discos.md`
+
+El comprobador solo mira que el texto esté escrito. Las cinco respuestas se contrastan con los apuntes y con la práctica del segundo disco.

@@ -1,8 +1,8 @@
 # Tarea 5 — Paquetes y utilidades
 
-Hazla en la máquina Ubuntu de la unidad, con la cuenta `admin`. Lee antes, en el dossier, «Paquetes y utilidades de gestión de la información».
+Hazla en la máquina Ubuntu de la unidad, con la cuenta `admin`. Lee antes, en los apuntes, «Paquetes y utilidades de gestión de la información».
 
-Este enunciado dice qué hay que dejar por escrito. El cómo consultar el gestor de paquetes está en el dossier y, si la usas, en una conversación con un modelo de lenguaje. La fecha de entrega y la calificación están en Moodle.
+Este enunciado dice qué hay que dejar por escrito. El cómo consultar el gestor de paquetes está en los apuntes y, si la usas, en una conversación con un modelo de lenguaje. La fecha de entrega y la calificación están en Moodle.
 
 Usa la copia `u03/trabajo` de la tarea 1. Si no existe, créala como allí se indica.
 
@@ -26,6 +26,9 @@ Desde la raíz del repositorio:
 bash u03/comprobar.sh tarea-05 | tee u03/trabajo/salidas/comprobar-tarea-05.txt
 ```
 
-Comprime la carpeta `u03/trabajo` en un `.zip` y súbelo a esta tarea. Un solo archivo. El zip puede arrastrar las tareas anteriores.
+Sube a Moodle estos dos ficheros:
 
-Dentro tienen que estar `salidas/comprobar-tarea-05.txt`, `salidas/apt-rsync.txt` (en la Ubuntu) y `respuestas/utilidades.md`. El comprobador mira la ficha. Las tres situaciones se contrastan con el dossier.
+- `u03/trabajo/salidas/comprobar-tarea-05.txt`
+- `u03/trabajo/respuestas/utilidades.md`
+
+El comprobador mira la ficha de `rsync`. Las tres situaciones se contrastan con los apuntes.

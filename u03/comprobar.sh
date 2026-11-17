@@ -95,7 +95,7 @@ need_file() {
 nota_texto() {
   local f="$1" etiqueta="$2"
   if [ -s "$f" ]; then
-    nota "$etiqueta está escrito. Contrástalo con el dossier."
+    nota "$etiqueta está escrito. Contrástalo con los apuntes."
   else
     nota "$etiqueta está pendiente. El comprobador no corrige ese texto."
   fi
@@ -494,7 +494,7 @@ check_paquetes() {
     nota "en este sistema no hay apt. Omite la ficha."
   fi
   if [ -s "$TRABAJO/respuestas/utilidades.md" ]; then
-    nota "respuestas/utilidades.md está escrito. Contrástalo con el dossier."
+    nota "respuestas/utilidades.md está escrito. Contrástalo con los apuntes."
   else
     pend "falta respuestas/utilidades.md"
   fi
@@ -502,7 +502,7 @@ check_paquetes() {
 
 check_discos() {
   section "Discos, volúmenes y Windows"
-  nota "respuestas/discos.md se contrasta con el dossier y con la práctica del segundo disco."
+  nota "respuestas/discos.md se contrasta con los apuntes y con la práctica del segundo disco."
   need_trabajo || return
   if [ -s "$TRABAJO/respuestas/discos.md" ]; then
     nota "el fichero está escrito."

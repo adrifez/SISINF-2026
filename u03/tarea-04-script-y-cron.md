@@ -1,8 +1,8 @@
 # Tarea 4 — Script y cron
 
-Hazla en la máquina Ubuntu de la unidad, con la cuenta `admin`. Lee antes, en el dossier, «Programación de tareas, variables y scripts». Conviene tener hecha la tarea 3: el script empaqueta el mismo `taller`.
+Hazla en la máquina Ubuntu de la unidad, con la cuenta `admin`. Lee antes, en los apuntes, «Programación de tareas, variables y scripts». Conviene tener hecha la tarea 3: el script empaqueta el mismo `taller`.
 
-Este enunciado dice qué tiene que cumplir el script y la línea de cron. El cómo está en el dossier y, si la usas, en una conversación con un modelo de lenguaje. La fecha de entrega y la calificación están en Moodle.
+Este enunciado dice qué tiene que cumplir el script y la línea de cron. El cómo está en los apuntes y, si la usas, en una conversación con un modelo de lenguaje. La fecha de entrega y la calificación están en Moodle.
 
 Usa la copia `u03/trabajo` de la tarea 1. El script vive en `u03/trabajo/bin`.
 
@@ -33,12 +33,9 @@ Desde la raíz del repositorio:
 bash u03/comprobar.sh tarea-04 | tee u03/trabajo/salidas/comprobar-tarea-04.txt
 ```
 
-Comprime la carpeta `u03/trabajo` en un `.zip` y súbelo a esta tarea. Un solo archivo. El zip puede arrastrar las tareas anteriores.
+Sube a Moodle estos dos ficheros:
 
-Dentro tienen que estar:
+- `u03/trabajo/salidas/comprobar-tarea-04.txt`
+- `u03/trabajo/respuestas/cron.md`
 
-- `salidas/comprobar-tarea-04.txt`
-- `bin/copia-taller.sh`
-- `salidas/crontab.txt`
-- `respuestas/cron.md`
-- `copias/taller-AAAA-MM-DD.tar.gz` y `copias/taller-AAAA-MM-DD.lista`, dejados por el script
+El comprobador lanza el script y mira la línea de cron. El texto se contrasta con los apuntes.
