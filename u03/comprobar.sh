@@ -1,5 +1,5 @@
 #!/bin/bash
-# Comprueba los resultados de u03/EJERCICIOS.md.
+# Comprueba una tarea de u03/tarea-0N-*.md.
 # Dice si cada resultado encaja. No imprime la orden que falta.
 
 export LC_ALL=C
@@ -23,8 +23,13 @@ nota() { printf '  %-10s %s\n' "nota" "$1"; }
 section() { printf '\n%s\n' "$1"; }
 
 usage() {
-  echo "Uso: bash u03/comprobar.sh [terminal|sistemas|buscar|copias|script|paquetes|discos]"
-  echo "Sin argumento comprueba todos los bloques."
+  echo "Uso: bash u03/comprobar.sh tarea-01|tarea-02|tarea-03|tarea-04|tarea-05"
+  echo
+  echo "  tarea-01  terminal, directorios y búsqueda"
+  echo "  tarea-02  discos, particiones y volúmenes"
+  echo "  tarea-03  copias de seguridad"
+  echo "  tarea-04  script y cron"
+  echo "  tarea-05  paquetes y utilidades"
 }
 
 abspath() {
@@ -476,10 +481,8 @@ debian_con_apt() {
 
 check_paquetes() {
   section "Paquetes y utilidades"
-  if ! debian_con_apt; then
-    nota "en este sistema no hay apt. Omite la ficha y escribe las tres situaciones."
-  else
-    need_trabajo || return
+  need_trabajo || return
+  if debian_con_apt; then
     if need_file "$TRABAJO/salidas/apt-rsync.txt" "falta salidas/apt-rsync.txt"; then
       if grep -q '^Package: rsync$' "$TRABAJO/salidas/apt-rsync.txt"; then
         ok "apt-rsync.txt es la ficha de rsync"
@@ -487,25 +490,30 @@ check_paquetes() {
         mal "apt-rsync.txt no es la ficha de rsync"
       fi
     fi
+  else
+    nota "en este sistema no hay apt. Omite la ficha."
   fi
-  if [ -d "$TRABAJO" ]; then
-    nota_texto "$TRABAJO/respuestas/utilidades.md" "respuestas/utilidades.md"
+  if [ -s "$TRABAJO/respuestas/utilidades.md" ]; then
+    nota "respuestas/utilidades.md está escrito. Contrástalo con el dossier."
+  else
+    pend "falta respuestas/utilidades.md"
   fi
 }
 
 check_discos() {
   section "Discos, volúmenes y Windows"
   nota "respuestas/discos.md se contrasta con el dossier y con la práctica del segundo disco."
+  need_trabajo || return
   if [ -s "$TRABAJO/respuestas/discos.md" ]; then
     nota "el fichero está escrito."
   else
-    nota "el fichero todavía no está escrito."
+    pend "falta respuestas/discos.md"
   fi
 }
 
-part="${1:-todo}"
+part="${1:-}"
 case "$part" in
-  todo|terminal|sistemas|buscar|copias|script|paquetes|discos) ;;
+  tarea-01|tarea-02|tarea-03|tarea-04|tarea-05) ;;
   -h|--help|help)
     usage
     exit 0
@@ -516,13 +524,17 @@ case "$part" in
     ;;
 esac
 
-[ "$part" = todo ] || [ "$part" = terminal ] && check_terminal
-[ "$part" = todo ] || [ "$part" = sistemas ] && check_sistemas
-[ "$part" = todo ] || [ "$part" = buscar ] && check_buscar
-[ "$part" = todo ] || [ "$part" = copias ] && check_copias
-[ "$part" = todo ] || [ "$part" = script ] && check_script
-[ "$part" = todo ] || [ "$part" = paquetes ] && check_paquetes
-[ "$part" = todo ] || [ "$part" = discos ] && check_discos
+case "$part" in
+  tarea-01)
+    check_terminal
+    check_sistemas
+    check_buscar
+    ;;
+  tarea-02) check_discos ;;
+  tarea-03) check_copias ;;
+  tarea-04) check_script ;;
+  tarea-05) check_paquetes ;;
+esac
 
 printf '\nResumen: %s ok, %s pendientes, %s mal\n' "$ok_n" "$pend_n" "$mal_n"
 if [ "$mal_n" -eq 0 ] && [ "$pend_n" -eq 0 ]; then
