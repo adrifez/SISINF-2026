@@ -1,51 +1,29 @@
 # Tarea 4 — Script y cron
 
-Hazla en la máquina Ubuntu de la unidad, con la cuenta `admin`, dentro de `u03/trabajo`. Lee antes, en el dossier, «Programación de tareas, variables y scripts». Conviene tener hecha la tarea 3: el script empaqueta el mismo `taller`. Este enunciado no trae el script resuelto.
+Hazla en la máquina Ubuntu de la unidad, con la cuenta `admin`. Lee antes, en el dossier, «Programación de tareas, variables y scripts». Conviene tener hecha la tarea 3: el script empaqueta el mismo `taller`.
 
-La fecha de entrega y la calificación están en Moodle.
+Este enunciado dice qué tiene que cumplir el script y la línea de cron. El cómo está en el dossier y, si la usas, en una conversación con un modelo de lenguaje. La fecha de entrega y la calificación están en Moodle.
 
-Si todavía no tienes la copia de trabajo, desde la raíz del repositorio:
-
-```bash
-cp -a u03/datos u03/trabajo
-mkdir -p u03/trabajo/salidas u03/trabajo/respuestas
-```
-
-Crea la carpeta del script:
-
-```bash
-mkdir -p u03/trabajo/bin
-cd u03/trabajo
-```
+Usa la copia `u03/trabajo` de la tarea 1. El script vive en `u03/trabajo/bin`.
 
 # El script
 
-Escribe `bin/copia-taller.sh`. Al lanzarlo con su ruta absoluta, desde cualquier directorio, tiene que cumplir todo esto:
+`bin/copia-taller.sh`, lanzado con su ruta absoluta desde cualquier directorio, tiene que cumplir todo esto:
 
-- La primera línea es `#!/bin/bash`.
-- El destino y la fecha son variables, asignadas sin espacios alrededor del igual.
-- La fecha sale de `date +%F`, en la forma `AAAA-MM-DD`.
+- Lo interpreta Bash: la primera línea es `#!/bin/bash` y el fichero es ejecutable.
+- El destino y la fecha son variables. La fecha no está escrita a fuego: el script la obtiene con `date` y el formato `%F`.
 - Crea `copias` si falta.
 - Deja `copias/taller-AAAA-MM-DD.tar.gz` con `taller/catalogo.txt` dentro y con rutas relativas.
-- Deja al lado `copias/taller-AAAA-MM-DD.lista`, la salida de `tar -tzf` de ese archivo.
+- Deja al lado `copias/taller-AAAA-MM-DD.lista`, el listado de ese archivo sin extraerlo.
 - Termina con código 0.
 
-Hazlo ejecutable. Pruébalo desde otro sitio, que es como lo va a lanzar cron:
-
-```bash
-chmod +x bin/copia-taller.sh
-cd /tmp
-"$OLDPWD/bin/copia-taller.sh"
-cd -
-```
-
-`OLDPWD` aquí es `u03/trabajo`, si el `cd /tmp` acaba de salir de esa carpeta. Si no, escribe la ruta absoluta que te dio `pwd` antes de cambiar. `cd -` vuelve a `trabajo`.
+Pruébalo desde un directorio que no sea `trabajo`. El comprobador hace esa misma prueba.
 
 # La línea de cron
 
-La tarea definitiva es todos los domingos a las 23:30. Los cinco campos son los del dossier. El domingo es 0. Cron usa un `PATH` corto: la orden es la ruta absoluta del script. Guarda una sola línea en `salidas/crontab.txt`.
+La ejecución definitiva es todos los domingos a las 23:30. En el día de la semana, el domingo es 0. La orden es la ruta absoluta del script, porque cron no busca en el directorio actual. Guarda una sola línea en `salidas/crontab.txt`.
 
-En una frase, dentro de `respuestas/cron.md`: qué decisión queda dentro del script para que el domingo siguiente no pise al anterior, y cómo sabes que el archivo se lee.
+En `respuestas/cron.md`, qué decisión queda dentro del script para que el domingo siguiente no pise al anterior, y cómo sabes que el archivo se lee.
 
 # Entregable
 
@@ -55,7 +33,7 @@ Desde la raíz del repositorio:
 bash u03/comprobar.sh tarea-04 | tee u03/trabajo/salidas/comprobar-tarea-04.txt
 ```
 
-Comprime la carpeta `u03/trabajo` en un `.zip` y súbelo a esta tarea. Un solo archivo. El zip puede arrastrar las tareas anteriores: el trabajo es acumulativo.
+Comprime la carpeta `u03/trabajo` en un `.zip` y súbelo a esta tarea. Un solo archivo. El zip puede arrastrar las tareas anteriores.
 
 Dentro tienen que estar:
 
