@@ -243,7 +243,7 @@ check_sistemas() {
   check_pair
   check_lugar fstab etc/fstab "configuración"
   check_lugar syslog var/log/syslog "registros"
-  check_lugar apuntes.txt home/alumno/apuntes.txt "la cuenta del alumno"
+  check_lugar apuntes.txt home/admin/apuntes.txt "la cuenta admin"
   check_lugar editor usr/bin/editor "programas"
   check_lugar cache.tmp tmp/cache.tmp "temporales"
   nota_texto "$TRABAJO/respuestas/sistemas.md" "respuestas/sistemas.md"

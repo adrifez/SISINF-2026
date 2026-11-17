@@ -4,7 +4,7 @@ Prácticas del módulo 0483, Sistemas informáticos. Se clonan y se hacen en el 
 
 ## U.T.3 — Gestión de la información en Linux
 
-Hazlas en la máquina Ubuntu de la unidad, con la cuenta `alumno`. El terminal es el de esa máquina. El dossier de la unidad se lee antes: este repositorio no lo trae.
+Hazlas en la máquina Ubuntu de la unidad, con la cuenta `admin`. El terminal es el de esa máquina. El dossier de la unidad se lee antes: este repositorio no lo trae.
 
 Las prácticas calificadas siguen siendo las del segundo disco y la de la copia programada. Aquí el escenario es otro, la biblioteca del aula, para ensayar los mismos criterios.
 

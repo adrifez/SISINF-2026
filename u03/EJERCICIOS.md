@@ -1,6 +1,6 @@
 # Práctica — Gestión de la información en Linux
 
-Haz los ejercicios en el terminal de la máquina Ubuntu de la unidad, con la cuenta `alumno`. Lee antes el apartado del dossier que indica cada bloque. Este cuaderno no trae las soluciones: el comprobador mira resultados y el texto se contrasta con el dossier.
+Haz los ejercicios en el terminal de la máquina Ubuntu de la unidad, con la cuenta `admin`. Lee antes el apartado del dossier que indica cada bloque. Este cuaderno no trae las soluciones: el comprobador mira resultados y el texto se contrasta con el dossier.
 
 Prepara la copia de trabajo una sola vez, desde la raíz del repositorio:
 
@@ -26,7 +26,7 @@ Un bloque suelto: `bash u03/comprobar.sh terminal`, y lo mismo con `sistemas`, `
 
 Apartado del dossier: «Uso de Linux: interfaz gráfica y terminal».
 
-El indicador acaba en `$` con la cuenta `alumno`. `#` sería la cuenta root. Los atajos de Tab, flecha arriba, Ctrl+C y Ctrl+D están en el dossier: úsalos en esta sesión.
+El indicador acaba en `$` con la cuenta `admin`. `#` sería la cuenta root. Los atajos de Tab, flecha arriba, Ctrl+C y Ctrl+D están en el dossier: úsalos en esta sesión.
 
 Desde `u03/trabajo`:
 
@@ -77,7 +77,7 @@ ls taller/Informe.txt taller/informe.txt
 | --- | --- |
 | `fstab` | Configuración de montajes, en texto |
 | `syslog` | Un registro |
-| `apuntes.txt` | Datos de la cuenta `alumno` |
+| `apuntes.txt` | Datos de la cuenta `admin` |
 | `editor` | Un programa |
 | `cache.tmp` | Un temporal |
 
