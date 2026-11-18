@@ -22,3 +22,5 @@ Las prácticas calificadas siguen siendo las del segundo disco y la de la copia 
 | 5. Paquetes y utilidades | [u03/tarea-05-paquetes.md](u03/tarea-05-paquetes.md) | `bash u03/comprobar.sh tarea-05` |
 
 Particionar, formatear y crear volúmenes (`parted`, `mkfs`, `lvcreate`) se hace en la práctica del segundo disco, sobre ese disco vacío. En la tarea 2 el disco del sistema no se toca: la respuesta va por escrito.
+
+La entrega del laboratorio 1 se rellena sobre [u03/plantilla-u03-01-terminal.md](u03/plantilla-u03-01-terminal.md). El fichero que se sube lleva los apellidos y el nombre: `u03-01-terminal-<apellidos>-<nombre>.md`.
