@@ -23,4 +23,12 @@ Las prácticas calificadas siguen siendo las del segundo disco y la de la copia 
 
 Particionar, formatear y crear volúmenes (`parted`, `mkfs`, `lvcreate`) se hace en la práctica del segundo disco, sobre ese disco vacío. En la tarea 2 el disco del sistema no se toca: la respuesta va por escrito.
 
-La entrega del laboratorio 1 se rellena sobre [u03/plantilla-u03-01-terminal.md](u03/plantilla-u03-01-terminal.md). El fichero que se sube lleva los apellidos y el nombre: `u03-01-terminal-<apellidos>-<nombre>.md`.
+La entrega de cada laboratorio se rellena sobre su plantilla. El fichero que se sube lleva los apellidos y el nombre.
+
+| Laboratorio | Plantilla | Nombre de la entrega |
+| --- | --- | --- |
+| 1. Terminal, directorios y búsqueda | [u03/plantilla-u03-01-terminal.md](u03/plantilla-u03-01-terminal.md) | `u03-01-terminal-<apellidos>-<nombre>.md` |
+| 2. Discos, particiones y volúmenes | [u03/plantilla-u03-02-discos.md](u03/plantilla-u03-02-discos.md) | `u03-lab02-<apellidos>-<nombre>.md` |
+| 3. Copias de seguridad | [u03/plantilla-u03-03-copias.md](u03/plantilla-u03-03-copias.md) | `u03-lab03-<apellidos>-<nombre>.md` |
+| 4. Script y cron | [u03/plantilla-u03-04-script.md](u03/plantilla-u03-04-script.md) | `u03-lab04-<apellidos>-<nombre>.md` |
+| 5. Paquetes y utilidades | [u03/plantilla-u03-05-paquetes.md](u03/plantilla-u03-05-paquetes.md) | `u03-lab05-<apellidos>-<nombre>.md` |
